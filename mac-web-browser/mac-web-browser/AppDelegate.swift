@@ -10,7 +10,9 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        if let mainViewController = NSApplication.shared.windows.first?.contentViewController as? MainViewController {
+            mainViewController.delegate = self
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -20,7 +22,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
+}
 
-
+extension AppDelegate: MainViewControllerDelegate {
+    func sendText(_ text: String) {
+        print(text)
+    }
 }
 
