@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F938362B28E08FF900AB53BD /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938362A28E08FF900AB53BD /* MainViewControllerTests.swift */; };
+		F95EC1CA28E516B0000AED28 /* core-web-browser in Frameworks */ = {isa = PBXBuildFile; productRef = F95EC1C928E516B0000AED28 /* core-web-browser */; };
 		F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */; };
 		F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC9028D00C1B00DEFDDF /* MainViewController.swift */; };
 		F972BC9328D00C1C00DEFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9228D00C1C00DEFDDF /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95EC1CA28E516B0000AED28 /* core-web-browser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +142,9 @@
 			dependencies = (
 			);
 			name = "mac-web-browser";
+			packageProductDependencies = (
+				F95EC1C928E516B0000AED28 /* core-web-browser */,
+			);
 			productName = "mac-web-browser";
 			productReference = F972BC8B28D00C1B00DEFDDF /* mac-web-browser.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +217,9 @@
 				Base,
 			);
 			mainGroup = F972BC8228D00C1B00DEFDDF;
+			packageReferences = (
+				F95EC1C828E516B0000AED28 /* XCRemoteSwiftPackageReference "core-web-browser" */,
+			);
 			productRefGroup = F972BC8C28D00C1B00DEFDDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -575,6 +583,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F95EC1C828E516B0000AED28 /* XCRemoteSwiftPackageReference "core-web-browser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mauriciomaniglia/core-web-browser.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F95EC1C928E516B0000AED28 /* core-web-browser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F95EC1C828E516B0000AED28 /* XCRemoteSwiftPackageReference "core-web-browser" */;
+			productName = "core-web-browser";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F972BC8328D00C1B00DEFDDF /* Project object */;
 }
