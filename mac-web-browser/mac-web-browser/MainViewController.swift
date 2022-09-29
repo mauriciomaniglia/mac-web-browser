@@ -23,8 +23,7 @@ public class MainViewController: NSViewController {
         view.addSubview(searchBar)
         view.addSubview(webView)
         searchBar.delegate = self
-        setupConstraints()
-        loadWebView("http:google.com")
+        setupConstraints()        
     }
     
     private func setupConstraints() {
@@ -39,12 +38,6 @@ public class MainViewController: NSViewController {
         webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         webView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
-    
-    private func loadWebView(_ string: String) {
-        let myURL = URL(string:string)
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
     }
 }
 

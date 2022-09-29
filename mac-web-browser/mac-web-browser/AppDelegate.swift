@@ -6,11 +6,15 @@
 //
 
 import Cocoa
+import core_web_browser
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var mainController: MainViewController?
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let mainViewController = NSApplication.shared.windows.first?.contentViewController as? MainViewController {
+            mainController = mainViewController
             mainViewController.delegate = self
         }
     }
@@ -26,7 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension AppDelegate: MainViewControllerDelegate {
     func sendText(_ text: String) {
-        print(text)
+        if let url = URIFixup.getURL(text) {
+            mainController?.webView.load(URLRequest(url: url))
+        }
     }
 }
 
