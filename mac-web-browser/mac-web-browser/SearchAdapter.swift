@@ -17,8 +17,6 @@ public final class SearchAdapter {
     }
     
     public func loadPage(from text: String) {
-        if let url = URIFixup.getURL(text) {
-            webView.load(URLRequest(url: url))
-        }
+        webView.load(URLRequest(url: SearchURLBuilder.makeURL(from: text)))
     }
 }
