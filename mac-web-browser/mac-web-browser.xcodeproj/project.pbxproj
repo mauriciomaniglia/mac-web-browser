@@ -16,20 +16,11 @@
 		F972BC9328D00C1C00DEFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9228D00C1C00DEFDDF /* Assets.xcassets */; };
 		F972BC9628D00C1C00DEFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9428D00C1C00DEFDDF /* Main.storyboard */; };
 		F972BCA128D00C1C00DEFDDF /* mac_web_browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */; };
-		F972BCAB28D00C1C00DEFDDF /* mac_web_browserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCAA28D00C1C00DEFDDF /* mac_web_browserUITests.swift */; };
-		F972BCAD28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCAC28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift */; };
 		F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F089290426B8000F4BD4 /* MainComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F972BC9D28D00C1C00DEFDDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F972BC8328D00C1B00DEFDDF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F972BC8A28D00C1B00DEFDDF;
-			remoteInfo = "mac-web-browser";
-		};
-		F972BCA728D00C1C00DEFDDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F972BC8328D00C1B00DEFDDF /* Project object */;
 			proxyType = 1;
@@ -50,9 +41,6 @@
 		F972BC9728D00C1C00DEFDDF /* mac_web_browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_web_browser.entitlements; sourceTree = "<group>"; };
 		F972BC9C28D00C1C00DEFDDF /* mac-web-browserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-web-browserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserTests.swift; sourceTree = "<group>"; };
-		F972BCA628D00C1C00DEFDDF /* mac-web-browserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-web-browserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F972BCAA28D00C1C00DEFDDF /* mac_web_browserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserUITests.swift; sourceTree = "<group>"; };
-		F972BCAC28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F9B9F089290426B8000F4BD4 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,13 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F972BCA328D00C1C00DEFDDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,7 +68,6 @@
 			children = (
 				F972BC8D28D00C1B00DEFDDF /* mac-web-browser */,
 				F972BC9F28D00C1C00DEFDDF /* mac-web-browserTests */,
-				F972BCA928D00C1C00DEFDDF /* mac-web-browserUITests */,
 				F972BC8C28D00C1B00DEFDDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +77,6 @@
 			children = (
 				F972BC8B28D00C1B00DEFDDF /* mac-web-browser.app */,
 				F972BC9C28D00C1C00DEFDDF /* mac-web-browserTests.xctest */,
-				F972BCA628D00C1C00DEFDDF /* mac-web-browserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,15 +103,6 @@
 				F93CAABE2904375F006E78CC /* SearchAdapterTests.swift */,
 			);
 			path = "mac-web-browserTests";
-			sourceTree = "<group>";
-		};
-		F972BCA928D00C1C00DEFDDF /* mac-web-browserUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F972BCAA28D00C1C00DEFDDF /* mac_web_browserUITests.swift */,
-				F972BCAC28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift */,
-			);
-			path = "mac-web-browserUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,24 +146,6 @@
 			productReference = F972BC9C28D00C1C00DEFDDF /* mac-web-browserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F972BCA528D00C1C00DEFDDF /* mac-web-browserUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F972BCB628D00C1C00DEFDDF /* Build configuration list for PBXNativeTarget "mac-web-browserUITests" */;
-			buildPhases = (
-				F972BCA228D00C1C00DEFDDF /* Sources */,
-				F972BCA328D00C1C00DEFDDF /* Frameworks */,
-				F972BCA428D00C1C00DEFDDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F972BCA828D00C1C00DEFDDF /* PBXTargetDependency */,
-			);
-			name = "mac-web-browserUITests";
-			productName = "mac-web-browserUITests";
-			productReference = F972BCA628D00C1C00DEFDDF /* mac-web-browserUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,10 +160,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					F972BC9B28D00C1C00DEFDDF = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = F972BC8A28D00C1B00DEFDDF;
-					};
-					F972BCA528D00C1C00DEFDDF = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = F972BC8A28D00C1B00DEFDDF;
 					};
@@ -235,7 +183,6 @@
 			targets = (
 				F972BC8A28D00C1B00DEFDDF /* mac-web-browser */,
 				F972BC9B28D00C1C00DEFDDF /* mac-web-browserTests */,
-				F972BCA528D00C1C00DEFDDF /* mac-web-browserUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,13 +198,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F972BC9A28D00C1C00DEFDDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F972BCA428D00C1C00DEFDDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,15 +228,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F972BCA228D00C1C00DEFDDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F972BCAD28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift in Sources */,
-				F972BCAB28D00C1C00DEFDDF /* mac_web_browserUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -304,11 +235,6 @@
 			isa = PBXTargetDependency;
 			target = F972BC8A28D00C1B00DEFDDF /* mac-web-browser */;
 			targetProxy = F972BC9D28D00C1C00DEFDDF /* PBXContainerItemProxy */;
-		};
-		F972BCA828D00C1C00DEFDDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F972BC8A28D00C1B00DEFDDF /* mac-web-browser */;
-			targetProxy = F972BCA728D00C1C00DEFDDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -523,38 +449,6 @@
 			};
 			name = Release;
 		};
-		F972BCB728D00C1C00DEFDDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mauricio-maniglia.mac-web-browserUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "mac-web-browser";
-			};
-			name = Debug;
-		};
-		F972BCB828D00C1C00DEFDDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mauricio-maniglia.mac-web-browserUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "mac-web-browser";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,15 +475,6 @@
 			buildConfigurations = (
 				F972BCB428D00C1C00DEFDDF /* Debug */,
 				F972BCB528D00C1C00DEFDDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F972BCB628D00C1C00DEFDDF /* Build configuration list for PBXNativeTarget "mac-web-browserUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F972BCB728D00C1C00DEFDDF /* Debug */,
-				F972BCB828D00C1C00DEFDDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
