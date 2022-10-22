@@ -8,12 +8,8 @@
 import Cocoa
 import WebKit
 
-public protocol MainViewControllerDelegate {
-    func sendText(_ text: String)
-}
-
 public class MainViewController: NSViewController {
-    public var delegate: MainViewControllerDelegate?
+    public var didSendText: ((String) -> Void)?
 
     let searchBar = NSTextField()
     let webView = WKWebView()
@@ -44,7 +40,7 @@ public class MainViewController: NSViewController {
 extension MainViewController: NSTextFieldDelegate {
     public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         if (commandSelector == #selector(NSResponder.insertNewline(_:))) {            
-            delegate?.sendText(textView.string)
+            didSendText?(textView.string)
             return true
         }
         return false

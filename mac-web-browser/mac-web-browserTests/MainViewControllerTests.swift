@@ -10,28 +10,16 @@ import mac_web_browser
 
 class MainViewControllerTests: XCTestCase {
     func test_controlTextViewDoCommandBy_whenPressEnter_sendsCorrectText() {
-        let delegate = MainViewControllerDelegateSpy()
         let sut = MainViewController()
-        sut.delegate = delegate
 
+        var receivedText: String?
+        sut.didSendText = { receivedText = $0 }
         _ = sut.control(NSControl(), textView: anyTextView("http://some-url.com"), doCommandBy: #selector(NSResponder.insertNewline(_:)))
 
-        XCTAssertEqual(delegate.receivedMessages, [.sendText("http://some-url.com")])
+        XCTAssertEqual(receivedText, "http://some-url.com")
     }
     
     // MARK: Helpers
-
-    private class MainViewControllerDelegateSpy: MainViewControllerDelegate {
-        enum Message: Equatable {
-            case sendText(_ text: String)
-        }
-
-        var receivedMessages = [Message]()
-
-        func sendText(_ text: String) {
-            receivedMessages.append(.sendText(text))
-        }
-    }
 
     private func anyTextView(_ string: String) -> NSTextView {
         let textView = NSTextView()
