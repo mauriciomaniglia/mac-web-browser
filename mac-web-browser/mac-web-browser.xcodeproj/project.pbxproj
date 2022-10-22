@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F938362B28E08FF900AB53BD /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938362A28E08FF900AB53BD /* MainViewControllerTests.swift */; };
+		F93CAABD29043621006E78CC /* SearchAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93CAABC29043621006E78CC /* SearchAdapter.swift */; };
+		F93CAABF2904375F006E78CC /* SearchAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93CAABE2904375F006E78CC /* SearchAdapterTests.swift */; };
 		F95EC1CA28E516B0000AED28 /* core-web-browser in Frameworks */ = {isa = PBXBuildFile; productRef = F95EC1C928E516B0000AED28 /* core-web-browser */; };
 		F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */; };
 		F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC9028D00C1B00DEFDDF /* MainViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		F938362A28E08FF900AB53BD /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		F93CAABC29043621006E78CC /* SearchAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdapter.swift; sourceTree = "<group>"; };
+		F93CAABE2904375F006E78CC /* SearchAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdapterTests.swift; sourceTree = "<group>"; };
 		F972BC8B28D00C1B00DEFDDF /* mac-web-browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mac-web-browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F972BC9028D00C1B00DEFDDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				F972BC9428D00C1C00DEFDDF /* Main.storyboard */,
 				F972BC9728D00C1C00DEFDDF /* mac_web_browser.entitlements */,
 				F9B9F089290426B8000F4BD4 /* MainComposer.swift */,
+				F93CAABC29043621006E78CC /* SearchAdapter.swift */,
 			);
 			path = "mac-web-browser";
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */,
 				F938362A28E08FF900AB53BD /* MainViewControllerTests.swift */,
+				F93CAABE2904375F006E78CC /* SearchAdapterTests.swift */,
 			);
 			path = "mac-web-browserTests";
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */,
+				F93CAABD29043621006E78CC /* SearchAdapter.swift in Sources */,
 				F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */,
 				F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */,
 			);
@@ -275,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93CAABF2904375F006E78CC /* SearchAdapterTests.swift in Sources */,
 				F972BCA128D00C1C00DEFDDF /* mac_web_browserTests.swift in Sources */,
 				F938362B28E08FF900AB53BD /* MainViewControllerTests.swift in Sources */,
 			);
