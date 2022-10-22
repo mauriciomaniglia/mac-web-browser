@@ -10,13 +10,9 @@ import core_web_browser
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var mainController: MainViewController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if let mainViewController = NSApplication.shared.windows.first?.contentViewController as? MainViewController {
-            mainController = mainViewController
-            mainViewController.delegate = self
-        }
+        MainComposer.composerWebView()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -25,14 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
-    }
-}
-
-extension AppDelegate: MainViewControllerDelegate {
-    func sendText(_ text: String) {
-        if let url = URIFixup.getURL(text) {
-            mainController?.webView.load(URLRequest(url: url))
-        }
     }
 }
 

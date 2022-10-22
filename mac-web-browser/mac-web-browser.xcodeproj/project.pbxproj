@@ -16,6 +16,7 @@
 		F972BCA128D00C1C00DEFDDF /* mac_web_browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */; };
 		F972BCAB28D00C1C00DEFDDF /* mac_web_browserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCAA28D00C1C00DEFDDF /* mac_web_browserUITests.swift */; };
 		F972BCAD28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCAC28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift */; };
+		F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F089290426B8000F4BD4 /* MainComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F972BCA628D00C1C00DEFDDF /* mac-web-browserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-web-browserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972BCAA28D00C1C00DEFDDF /* mac_web_browserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserUITests.swift; sourceTree = "<group>"; };
 		F972BCAC28D00C1C00DEFDDF /* mac_web_browserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9B9F089290426B8000F4BD4 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				F972BC9228D00C1C00DEFDDF /* Assets.xcassets */,
 				F972BC9428D00C1C00DEFDDF /* Main.storyboard */,
 				F972BC9728D00C1C00DEFDDF /* mac_web_browser.entitlements */,
+				F9B9F089290426B8000F4BD4 /* MainComposer.swift */,
 			);
 			path = "mac-web-browser";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */,
+				F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */,
 				F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
