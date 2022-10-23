@@ -19,17 +19,12 @@ final public class MainWindowController: NSWindowController {
 
     private func configureToolbar() {
         if let unwrappedWindow = self.window {
-            
-            let newToolbar = NSToolbar(identifier: "MainWindowToolbar")
-            newToolbar.delegate = self
-            newToolbar.allowsUserCustomization = true
-            newToolbar.autosavesConfiguration = true
-            newToolbar.displayMode = .iconOnly
-            newToolbar.centeredItemIdentifier = NSToolbarItem.Identifier("toolbarSearchItem")
+            let toolbar = MainToolbarFactory.toolbar()
+            toolbar.delegate = self
             
             unwrappedWindow.toolbarStyle = .unified
             unwrappedWindow.titleVisibility = .hidden
-            unwrappedWindow.toolbar = newToolbar
+            unwrappedWindow.toolbar = toolbar
             unwrappedWindow.toolbar?.validateVisibleItems()
         }
     }
@@ -38,30 +33,19 @@ final public class MainWindowController: NSWindowController {
 extension MainWindowController: NSToolbarDelegate {
     public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         if itemIdentifier == NSToolbarItem.Identifier("toolbarBackItem") {
-            let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
-            toolbarItem.target = self
+            let toolbarItem = MainToolbarFactory.backItem(itemIdentifier)            
             toolbarItem.action = #selector(didSelectItem(_:))
-            toolbarItem.paletteLabel = "Shows the previous page"
-            toolbarItem.toolTip = "Hold to show the history"
-            toolbarItem.isBordered = true
-            toolbarItem.image = NSImage(systemSymbolName: "chevron.left", accessibilityDescription: "")
             return toolbarItem
         }
         
         if itemIdentifier == NSToolbarItem.Identifier("toolbarFowardItem") {
-            let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
-            toolbarItem.target = self
-            toolbarItem.action = #selector(didSelectItem(_:))
-            toolbarItem.paletteLabel = "Show the next page"
-            toolbarItem.toolTip = "Hold to show the history"
-            toolbarItem.isBordered = true
-            toolbarItem.image = NSImage(systemSymbolName: "chevron.right", accessibilityDescription: "")
+            let toolbarItem = MainToolbarFactory.forwardItem(itemIdentifier)
+            toolbarItem.action = #selector(didSelectItem(_:))            
             return toolbarItem
         }
         
         if itemIdentifier == NSToolbarItem.Identifier("toolbarSearchItem") {
-            let searchItem = NSSearchToolbarItem(itemIdentifier: itemIdentifier)
-            searchItem.resignsFirstResponderWithCancel = true
+            let searchItem = MainToolbarFactory.searchItem(itemIdentifier)
             searchItem.searchField.delegate = self
             return searchItem
         }
