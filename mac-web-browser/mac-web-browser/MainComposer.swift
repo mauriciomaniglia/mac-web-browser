@@ -9,9 +9,10 @@ import AppKit
 
 final class MainComposer {
     static func composerWebView() {
-        let mainViewController = NSApplication.shared.windows.first?.contentViewController as! MainViewController
-        let searchAdapter = SearchAdapter(webView: mainViewController.webView)
+        let mainWindowController = NSApplication.shared.windows.first?.windowController as! MainWindowController
+        let contentViewController = mainWindowController.contentViewController as! MainViewController
+        let searchAdapter = SearchAdapter(webView: contentViewController.webView)
         
-        mainViewController.didSendText = searchAdapter.loadPage(from:)
+        mainWindowController.didSendText = searchAdapter.loadPage(from:)
     }
 }
