@@ -15,7 +15,6 @@
 		F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC9028D00C1B00DEFDDF /* MainViewController.swift */; };
 		F972BC9328D00C1C00DEFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9228D00C1C00DEFDDF /* Assets.xcassets */; };
 		F972BC9628D00C1C00DEFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9428D00C1C00DEFDDF /* Main.storyboard */; };
-		F972BCA128D00C1C00DEFDDF /* mac_web_browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */; };
 		F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F089290426B8000F4BD4 /* MainComposer.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		F972BC9528D00C1C00DEFDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F972BC9728D00C1C00DEFDDF /* mac_web_browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_web_browser.entitlements; sourceTree = "<group>"; };
 		F972BC9C28D00C1C00DEFDDF /* mac-web-browserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-web-browserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mac_web_browserTests.swift; sourceTree = "<group>"; };
 		F9B9F089290426B8000F4BD4 /* MainComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 		F972BC9F28D00C1C00DEFDDF /* mac-web-browserTests */ = {
 			isa = PBXGroup;
 			children = (
-				F972BCA028D00C1C00DEFDDF /* mac_web_browserTests.swift */,
 				F938362A28E08FF900AB53BD /* MainViewControllerTests.swift */,
 				F93CAABE2904375F006E78CC /* SearchAdapterTests.swift */,
 			);
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93CAABF2904375F006E78CC /* SearchAdapterTests.swift in Sources */,
-				F972BCA128D00C1C00DEFDDF /* mac_web_browserTests.swift in Sources */,
 				F938362B28E08FF900AB53BD /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
