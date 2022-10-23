@@ -1,5 +1,5 @@
 //
-//  MainViewControllerTests.swift
+//  MainWindowControllerTests.swift
 //  mac-web-browserTests
 //
 //  Created by Mauricio Cesar on 25/09/22.
@@ -8,9 +8,9 @@
 import XCTest
 import mac_web_browser
 
-class MainViewControllerTests: XCTestCase {
+class MainWindowControllerTests: XCTestCase {
     func test_controlTextViewDoCommandBy_whenPressEnter_sendsCorrectText() {
-        let sut = MainViewController()
+        let sut = MainWindowController()
 
         var receivedText: String?
         sut.didSendText = { receivedText = $0 }
