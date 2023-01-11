@@ -13,7 +13,7 @@
 		F93CAAC22904E0BA006E78CC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93CAAC12904E0BA006E78CC /* MainWindowController.swift */; };
 		F95EC1CA28E516B0000AED28 /* core-web-browser in Frameworks */ = {isa = PBXBuildFile; productRef = F95EC1C928E516B0000AED28 /* core-web-browser */; };
 		F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */; };
-		F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC9028D00C1B00DEFDDF /* MainViewController.swift */; };
+		F972BC9128D00C1B00DEFDDF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972BC9028D00C1B00DEFDDF /* MainView.swift */; };
 		F972BC9328D00C1C00DEFDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9228D00C1C00DEFDDF /* Assets.xcassets */; };
 		F972BC9628D00C1C00DEFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9428D00C1C00DEFDDF /* Main.storyboard */; };
 		F9753CBA290588BA0085A95B /* MainToolbarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9753CB9290588BA0085A95B /* MainToolbarFactory.swift */; };
@@ -37,7 +37,7 @@
 		F93CAAC12904E0BA006E78CC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F972BC8B28D00C1B00DEFDDF /* mac-web-browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mac-web-browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F972BC9028D00C1B00DEFDDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F972BC9028D00C1B00DEFDDF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F972BC9228D00C1C00DEFDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F972BC9528D00C1C00DEFDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F972BC9728D00C1C00DEFDDF /* mac_web_browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_web_browser.entitlements; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		F9989D87296E377200A309FA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F972BC9028D00C1B00DEFDDF /* MainViewController.swift */,
+				F972BC9028D00C1B00DEFDDF /* MainView.swift */,
 				F9B9F089290426B8000F4BD4 /* MainComposer.swift */,
 				F93CAAC12904E0BA006E78CC /* MainWindowController.swift */,
 				F9753CB9290588BA0085A95B /* MainToolbarFactory.swift */,
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F972BC9128D00C1B00DEFDDF /* MainViewController.swift in Sources */,
+				F972BC9128D00C1B00DEFDDF /* MainView.swift in Sources */,
 				F93CAABD29043621006E78CC /* SearchAdapter.swift in Sources */,
 				F9B9F08A290426B8000F4BD4 /* MainComposer.swift in Sources */,
 				F9753CBA290588BA0085A95B /* MainToolbarFactory.swift in Sources */,
