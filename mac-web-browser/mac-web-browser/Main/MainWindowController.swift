@@ -1,9 +1,13 @@
 import Cocoa
 
+public protocol MainViewProtocol {
+    func didSendText(_ text: String)
+    func didTapBackButton()
+    func didTapForwardButton()
+}
+
 final public class MainWindowController: NSWindowController {
-    public var didSendText: ((String) -> Void)?
-    public var didSelectBackButton: (() -> Void)?
-    public var didSelectFowardButton: (() -> Void)?
+    public var delegate: MainViewProtocol?
     
     public override func windowDidLoad(){
         super.windowDidLoad()
@@ -61,9 +65,9 @@ extension MainWindowController: NSToolbarDelegate {
     @objc private func didSelectItem(_ sender: NSToolbarItem) {
         switch sender.itemIdentifier.rawValue {
         case "toolbarBackItem":
-            didSelectBackButton?()
+            delegate?.didTapBackButton()
         case "toolbarFowardItem":
-            didSelectFowardButton?()
+            delegate?.didTapForwardButton()
         default:
             break
         }
@@ -72,8 +76,8 @@ extension MainWindowController: NSToolbarDelegate {
 
 extension MainWindowController: NSSearchFieldDelegate {
     public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
-            didSendText?(textView.string)
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {            
+            delegate?.didSendText(textView.string)
             return true
         }
         return false
