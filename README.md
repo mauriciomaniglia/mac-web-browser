@@ -2,9 +2,9 @@
 Web browser for MacOS 
 
 ## TODO
-- Search bar
+- Search bar ✅
 - Reload Page
-- Implement navigation (back / forward)
+- Implement navigation (back / forward) 🔨
 - Long-press (navigation)
 - Autocomplete suggestions
 - Check Site Protection
