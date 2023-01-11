@@ -1,10 +1,3 @@
-//
-//  MainWindowController.swift
-//  mac-web-browser
-//
-//  Created by Mauricio Cesar on 22/10/22.
-//
-
 import Cocoa
 
 final public class MainWindowController: NSWindowController {

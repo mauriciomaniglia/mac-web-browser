@@ -1,10 +1,3 @@
-//
-//  MainComposer.swift
-//  mac-web-browser
-//
-//  Created by Mauricio Cesar on 22/10/22.
-//
-
 import AppKit
 
 final class MainComposer {
