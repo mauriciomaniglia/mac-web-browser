@@ -2,8 +2,6 @@ import Cocoa
 import WebKit
 
 public class MainViewController: NSViewController {
-    public var didSendText: ((String) -> Void)?
-
     let webView = WKWebView()
 
     public override func viewDidLoad() {
