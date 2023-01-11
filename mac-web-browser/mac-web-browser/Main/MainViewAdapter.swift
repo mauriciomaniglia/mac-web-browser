@@ -2,7 +2,7 @@ import Foundation
 import WebKit
 import core_web_browser
 
-public final class SearchAdapter: MainViewProtocol {
+public final class MainViewAdapter: MainViewProtocol {
     let webView: WKWebView
     
     public init(webView: WKWebView) {
