@@ -1,10 +1,3 @@
-//
-//  MainToolbarFactory.swift
-//  mac-web-browser
-//
-//  Created by Mauricio Cesar on 23/10/22.
-//
-
 import Foundation
 import AppKit
 

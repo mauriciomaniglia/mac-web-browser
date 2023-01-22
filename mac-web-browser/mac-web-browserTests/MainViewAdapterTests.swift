@@ -1,10 +1,3 @@
-//
-//  SearchAdapterTests.swift
-//  mac-web-browserTests
-//
-//  Created by Mauricio Cesar on 22/10/22.
-//
-
 import XCTest
 import mac_web_browser
 import WebKit
