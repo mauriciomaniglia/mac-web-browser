@@ -18,7 +18,6 @@ final public class MainWindowController: NSWindowController {
         if let unwrappedWindow = self.window {
             let toolbar = MainToolbarFactory.toolbar()
             toolbar.delegate = self
-            
             unwrappedWindow.toolbarStyle = .unified
             unwrappedWindow.titleVisibility = .hidden
             unwrappedWindow.toolbar = toolbar
@@ -31,13 +30,13 @@ extension MainWindowController: NSToolbarDelegate {
     public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         if itemIdentifier == NSToolbarItem.Identifier("toolbarBackItem") {
             let toolbarItem = MainToolbarFactory.backItem(itemIdentifier)            
-            toolbarItem.action = #selector(didSelectItem(_:))
+            toolbarItem.action = #selector(didTapBackButton)
             return toolbarItem
         }
         
         if itemIdentifier == NSToolbarItem.Identifier("toolbarFowardItem") {
             let toolbarItem = MainToolbarFactory.forwardItem(itemIdentifier)
-            toolbarItem.action = #selector(didSelectItem(_:))            
+            toolbarItem.action = #selector(didTapForwardButton)
             return toolbarItem
         }
         
@@ -61,16 +60,13 @@ extension MainWindowController: NSToolbarDelegate {
     public func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return []
     }
-    
-    @objc private func didSelectItem(_ sender: NSToolbarItem) {
-        switch sender.itemIdentifier.rawValue {
-        case "toolbarBackItem":
-            delegate?.didTapBackButton()
-        case "toolbarFowardItem":
-            delegate?.didTapForwardButton()
-        default:
-            break
-        }
+
+    @objc private func didTapBackButton() {
+        delegate?.didTapBackButton()
+    }
+
+    @objc private func didTapForwardButton() {
+        delegate?.didTapForwardButton()
     }
 }
 
