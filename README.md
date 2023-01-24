@@ -5,6 +5,7 @@ Web browser for MacOS
 - Search bar ✅
 - Reload Page
 - Implement navigation (back / forward) 🔨
+- Loading (progress bar)
 - Long-press (navigation)
 - Autocomplete suggestions
 - Check Site Protection
