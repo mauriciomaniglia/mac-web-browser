@@ -3,10 +3,10 @@
     {
       "identity" : "core-web-browser",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:mauriciomaniglia/core-web-browser.git",
+      "location" : "https://github.com/mauriciomaniglia/core-web-browser",
       "state" : {
         "branch" : "main",
-        "revision" : "59182d270b1b0bebfbae70bf0c88c7c0c427e249"
+        "revision" : "ab9d6a2057a2598bb90c0d2528535ef83f901bd5"
       }
     }
   ],
