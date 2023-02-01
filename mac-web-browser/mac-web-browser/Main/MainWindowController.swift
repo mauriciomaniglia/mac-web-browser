@@ -10,13 +10,13 @@ final public class MainWindowController: NSWindowController {
     }
 
     private func configureToolbar() {
-        if let unwrappedWindow = self.window {
+        if let window = self.window {
             let toolbar = MainToolbarFactory.toolbar()
             toolbar.delegate = self
-            unwrappedWindow.toolbarStyle = .unified
-            unwrappedWindow.titleVisibility = .hidden
-            unwrappedWindow.toolbar = toolbar
-            unwrappedWindow.toolbar?.validateVisibleItems()
+            window.toolbarStyle = .unified
+            window.titleVisibility = .hidden
+            window.toolbar = toolbar
+            window.toolbar?.validateVisibleItems()
         }
     }
 }
@@ -67,7 +67,7 @@ extension MainWindowController: NSToolbarDelegate {
 
 extension MainWindowController: NSSearchFieldDelegate {
     public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {                        
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
             delegate?.didRequestSearch(textView.string)
             return true
         }
