@@ -1,5 +1,6 @@
 import XCTest
 import mac_web_browser
+import core_web_browser
 
 class MainWindowControllerTests: XCTestCase {
     func test_controlTextViewDoCommandBy_whenPressEnter_sendsCorrectText() {
@@ -9,22 +10,30 @@ class MainWindowControllerTests: XCTestCase {
 
         _ = sut.control(NSControl(), textView: anyTextView("http://some-url.com"), doCommandBy: #selector(NSResponder.insertNewline(_:)))
 
-        XCTAssertEqual(delegate.receivedMessages, [.didSendText("http://some-url.com")])
+        XCTAssertEqual(delegate.receivedMessages, [.didRequestSearch("http://some-url.com")])
     }
     
     // MARK: Helpers
 
-    private class MainViewDelegateSpy: MainViewProtocol {
+    private class MainViewDelegateSpy: WindowViewContract {
         enum Message: Equatable {
-            case didSendText(_ text: String)
+            case didRequestSearch(_ text: String)
             case didTapBackButton
             case didTapForwardButton
         }
 
         var receivedMessages = [Message]()
 
-        func didSendText(_ text: String) {
-            receivedMessages.append(.didSendText(text))
+        func didRequestSearch(_ text: String) {
+            receivedMessages.append(.didRequestSearch(text))
+        }
+
+        func didStartTyping() {
+
+        }
+
+        func didEndTyping() {
+
         }
 
         func didTapBackButton() {

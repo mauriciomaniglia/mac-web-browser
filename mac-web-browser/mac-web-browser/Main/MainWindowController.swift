@@ -1,13 +1,8 @@
 import Cocoa
-
-public protocol MainViewProtocol {
-    func didSendText(_ text: String)
-    func didTapBackButton()
-    func didTapForwardButton()
-}
+import core_web_browser
 
 final public class MainWindowController: NSWindowController {
-    public var delegate: MainViewProtocol?
+    public var delegate: WindowViewContract?
     
     public override func windowDidLoad(){
         super.windowDidLoad()
@@ -72,8 +67,8 @@ extension MainWindowController: NSToolbarDelegate {
 
 extension MainWindowController: NSSearchFieldDelegate {
     public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {            
-            delegate?.didSendText(textView.string)
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {                        
+            delegate?.didRequestSearch(textView.string)
             return true
         }
         return false
