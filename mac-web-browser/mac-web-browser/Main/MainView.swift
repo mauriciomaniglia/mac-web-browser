@@ -5,8 +5,7 @@ public class MainView: NSView {
     let webView = WKWebView()
 
     convenience init() {
-        self.init(frame: .init(origin: .init(x: 0, y: 0),
-                               size: .init(width: 1000, height: 500)))
+        self.init(frame: .init(origin: .init(x: 0, y: 0), size: .init(width: 1000, height: 500)))
         addSubview(webView)
         setupConstraints()
     }

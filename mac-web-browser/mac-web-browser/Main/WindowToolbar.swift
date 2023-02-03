@@ -19,14 +19,6 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
         setupToolbarItems()
     }
 
-    private func setupToolbarItems() {
-        goBackItem.action = #selector(didTapBackButton)
-        goBackItem.target = self
-        goForwardItem.action = #selector(didTapForwardButton)
-        goForwardItem.target = self
-        searchItem.searchField.delegate = self
-    }
-
     public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         if itemIdentifier == .init(goBackItemIdentifier) { return goBackItem }
         if itemIdentifier == .init(goForwardItemIdentifier) { return goForwardItem }
@@ -44,6 +36,14 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
 
     public func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return []
+    }
+
+    private func setupToolbarItems() {
+        goBackItem.action = #selector(didTapBackButton)
+        goBackItem.target = self
+        goForwardItem.action = #selector(didTapForwardButton)
+        goForwardItem.target = self
+        searchItem.searchField.delegate = self
     }
 
     @objc private func didTapBackButton() {
