@@ -3,36 +3,42 @@ import core_web_browser
 
 public final class WindowToolbar: NSObject, NSToolbarDelegate {
     public var delegate: WindowViewContract?
+    public let goBackItem: NSToolbarItem
+    public let goForwardItem: NSToolbarItem
+    public let searchItem: NSSearchToolbarItem
+
+    private let goBackItemIdentifier = "toolbarBackItem"
+    private let goForwardItemIdentifier = "toolbarFowardItem"
+    private let searchItemIdentifier = "toolbarSearchItem"
+
+    public override init() {
+        goBackItem = MainToolbarFactory.backItem(.init(goBackItemIdentifier))
+        goForwardItem = MainToolbarFactory.forwardItem(.init(goForwardItemIdentifier))
+        searchItem = MainToolbarFactory.searchItem(.init(searchItemIdentifier))
+        super.init()
+        setupToolbarItems()
+    }
+
+    private func setupToolbarItems() {
+        goBackItem.action = #selector(didTapBackButton)
+        goBackItem.target = self
+        goForwardItem.action = #selector(didTapForwardButton)
+        goForwardItem.target = self
+        searchItem.searchField.delegate = self
+    }
 
     public func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
-        if itemIdentifier == NSToolbarItem.Identifier("toolbarBackItem") {
-            let toolbarItem = MainToolbarFactory.backItem(itemIdentifier)
-            toolbarItem.action = #selector(didTapBackButton)
-            toolbarItem.target = self
-            return toolbarItem
-        }
-
-        if itemIdentifier == NSToolbarItem.Identifier("toolbarFowardItem") {
-            let toolbarItem = MainToolbarFactory.forwardItem(itemIdentifier)
-            toolbarItem.action = #selector(didTapForwardButton)
-            toolbarItem.target = self
-            return toolbarItem
-        }
-
-        if itemIdentifier == NSToolbarItem.Identifier("toolbarSearchItem") {
-            let searchItem = MainToolbarFactory.searchItem(itemIdentifier)
-            searchItem.searchField.delegate = self
-            return searchItem
-        }
-
+        if itemIdentifier == .init(goBackItemIdentifier) { return goBackItem }
+        if itemIdentifier == .init(goForwardItemIdentifier) { return goForwardItem }
+        if itemIdentifier == .init(searchItemIdentifier) { return searchItem }
         return nil
     }
 
     public func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         return [
-            NSToolbarItem.Identifier("toolbarBackItem"),
-            NSToolbarItem.Identifier("toolbarFowardItem"),
-            NSToolbarItem.Identifier("toolbarSearchItem")
+            .init(goBackItemIdentifier),
+            .init(goForwardItemIdentifier),
+            .init(searchItemIdentifier)
         ]
     }
 
