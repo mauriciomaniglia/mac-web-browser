@@ -2,10 +2,10 @@ import XCTest
 import mac_web_browser
 import core_web_browser
 
-class MainWindowControllerTests: XCTestCase {
+class WindowToolbarTests: XCTestCase {
     func test_controlTextViewDoCommandBy_whenPressEnter_sendsCorrectText() {
         let delegate = MainViewDelegateSpy()
-        let sut = MainWindowController()
+        let sut = WindowToolbar()
         sut.delegate = delegate
 
         _ = sut.control(NSControl(), textView: anyTextView("http://some-url.com"), doCommandBy: #selector(NSResponder.insertNewline(_:)))
