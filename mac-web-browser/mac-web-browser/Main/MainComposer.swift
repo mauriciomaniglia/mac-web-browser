@@ -10,6 +10,10 @@ final class MainComposer {
         let windowViewAdapter = WindowViewAdapter(webViewProxy: webViewProxy, presenter: windowPresenter)
 
         mainWindowController.contentViewController?.view = mainView
+        webViewProxy.delegate = windowViewAdapter
         mainWindowController.toolbarDelegate.delegate = windowViewAdapter
+        windowPresenter.didUpdatePresentableModel = mainWindowController.updateViews(_:)
+
+        windowPresenter.didStartNewWindow()
     }
 }

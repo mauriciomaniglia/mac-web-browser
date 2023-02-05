@@ -19,4 +19,10 @@ final public class MainWindowController: NSWindowController {
             window.toolbar?.validateVisibleItems()
         }
     }
+
+    public func updateViews(_ presentableModel: WindowPresentableModel) {
+        (contentViewController?.view as? MainView)?.webView.isHidden = !presentableModel.showWebView
+        toolbarDelegate.goBackItem.target = presentableModel.canGoBack ? toolbarDelegate : nil
+        toolbarDelegate.goForwardItem.target = presentableModel.canGoForward ? toolbarDelegate : nil
+    }
 }
