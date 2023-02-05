@@ -1,7 +1,7 @@
 import Cocoa
 import core_web_browser
 
-final public class MainWindowController: NSWindowController {
+final public class WindowController: NSWindowController {
     let toolbarDelegate = WindowToolbar()
     
     public override func windowDidLoad(){
@@ -11,7 +11,7 @@ final public class MainWindowController: NSWindowController {
 
     private func configureToolbar() {
         if let window = self.window {
-            let toolbar = MainToolbarFactory.toolbar()
+            let toolbar = WindowToolbarFactory.toolbar()
             toolbar.delegate = toolbarDelegate
             window.toolbarStyle = .unified
             window.titleVisibility = .hidden
@@ -21,7 +21,7 @@ final public class MainWindowController: NSWindowController {
     }
 
     public func updateViews(_ presentableModel: WindowPresentableModel) {
-        (contentViewController?.view as? MainView)?.webView.isHidden = !presentableModel.showWebView
+        (contentViewController?.view as? WindowView)?.webView.isHidden = !presentableModel.showWebView
         toolbarDelegate.goBackItem.target = presentableModel.canGoBack ? toolbarDelegate : nil
         toolbarDelegate.goForwardItem.target = presentableModel.canGoForward ? toolbarDelegate : nil
     }

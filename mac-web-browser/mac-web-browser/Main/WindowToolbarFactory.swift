@@ -1,7 +1,7 @@
 import Foundation
 import AppKit
 
-final class MainToolbarFactory {
+final class WindowToolbarFactory {
     static func toolbar() -> NSToolbar {
         let toolbar = NSToolbar(identifier: "MainWindowToolbar")
         toolbar.allowsUserCustomization = true

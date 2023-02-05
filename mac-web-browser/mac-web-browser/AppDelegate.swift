@@ -5,7 +5,7 @@ import core_web_browser
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        MainComposer.composerWebView()
+        WindowComposer.composerWebView()
     }
 }
 

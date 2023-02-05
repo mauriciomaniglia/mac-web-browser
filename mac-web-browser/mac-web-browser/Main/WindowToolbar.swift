@@ -12,9 +12,9 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
     private let searchItemIdentifier = "toolbarSearchItem"
 
     public override init() {
-        goBackItem = MainToolbarFactory.backItem(.init(goBackItemIdentifier))
-        goForwardItem = MainToolbarFactory.forwardItem(.init(goForwardItemIdentifier))
-        searchItem = MainToolbarFactory.searchItem(.init(searchItemIdentifier))
+        goBackItem = WindowToolbarFactory.backItem(.init(goBackItemIdentifier))
+        goForwardItem = WindowToolbarFactory.forwardItem(.init(goForwardItemIdentifier))
+        searchItem = WindowToolbarFactory.searchItem(.init(searchItemIdentifier))
         super.init()
         setupToolbarItems()
     }

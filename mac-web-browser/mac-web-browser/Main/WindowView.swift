@@ -1,7 +1,7 @@
 import Cocoa
 import WebKit
 
-public class MainView: NSView {
+public class WindowView: NSView {
     let webView = WKWebView()
 
     convenience init() {
