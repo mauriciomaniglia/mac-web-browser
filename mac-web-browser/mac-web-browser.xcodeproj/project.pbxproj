@@ -84,7 +84,7 @@
 		F972BC8D28D00C1B00DEFDDF /* mac-web-browser */ = {
 			isa = PBXGroup;
 			children = (
-				F9989D87296E377200A309FA /* Main */,
+				F9989D87296E377200A309FA /* Window */,
 				F972BC8E28D00C1B00DEFDDF /* AppDelegate.swift */,
 				F972BC9228D00C1C00DEFDDF /* Assets.xcassets */,
 				F972BC9428D00C1C00DEFDDF /* Main.storyboard */,
@@ -101,7 +101,7 @@
 			path = "mac-web-browserTests";
 			sourceTree = "<group>";
 		};
-		F9989D87296E377200A309FA /* Main */ = {
+		F9989D87296E377200A309FA /* Window */ = {
 			isa = PBXGroup;
 			children = (
 				F972BC9028D00C1B00DEFDDF /* WindowView.swift */,
@@ -110,7 +110,7 @@
 				F9753CB9290588BA0085A95B /* WindowToolbarFactory.swift */,
 				F97E4BE2298D3E17005D1EF1 /* WindowToolbar.swift */,
 			);
-			path = Main;
+			path = Window;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
