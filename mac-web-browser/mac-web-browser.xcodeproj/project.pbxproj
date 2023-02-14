@@ -101,14 +101,30 @@
 			path = "mac-web-browserTests";
 			sourceTree = "<group>";
 		};
-		F9989D87296E377200A309FA /* Window */ = {
+		F97BD53C299BC97F004BD7A6 /* Composition */ = {
+			isa = PBXGroup;
+			children = (
+				F9B9F089290426B8000F4BD4 /* WindowComposer.swift */,
+			);
+			path = Composition;
+			sourceTree = "<group>";
+		};
+		F97BD53D299BC98B004BD7A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F972BC9028D00C1B00DEFDDF /* WindowView.swift */,
-				F9B9F089290426B8000F4BD4 /* WindowComposer.swift */,
 				F93CAAC12904E0BA006E78CC /* WindowController.swift */,
 				F9753CB9290588BA0085A95B /* WindowToolbarFactory.swift */,
 				F97E4BE2298D3E17005D1EF1 /* WindowToolbar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9989D87296E377200A309FA /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				F97BD53D299BC98B004BD7A6 /* Views */,
+				F97BD53C299BC97F004BD7A6 /* Composition */,
 			);
 			path = Window;
 			sourceTree = "<group>";
