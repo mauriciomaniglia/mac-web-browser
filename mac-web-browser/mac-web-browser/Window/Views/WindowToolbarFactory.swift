@@ -32,10 +32,13 @@ final class WindowToolbarFactory {
         return toolbarItem
     }
     
-    static func searchItem(_ identifier: NSToolbarItem.Identifier) -> NSSearchToolbarItem {
-        let searchItem = NSSearchToolbarItem(itemIdentifier: identifier)
-        searchItem.resignsFirstResponderWithCancel = true
-        
-        return searchItem
+    static func searchItem(_ identifier: NSToolbarItem.Identifier) -> NSToolbarItem {
+        let searchBarView = SearchBarView()
+        let toolbarItem = NSToolbarItem(itemIdentifier: identifier)
+        toolbarItem.paletteLabel = "Search bar"
+        toolbarItem.toolTip = "Search or enter website name"
+        toolbarItem.view = searchBarView
+
+        return toolbarItem
     }
 }

@@ -15,6 +15,7 @@
 		F972BC9628D00C1C00DEFDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F972BC9428D00C1C00DEFDDF /* Main.storyboard */; };
 		F9753CBA290588BA0085A95B /* WindowToolbarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9753CB9290588BA0085A95B /* WindowToolbarFactory.swift */; };
 		F97E4BE3298D3E17005D1EF1 /* WindowToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97E4BE2298D3E17005D1EF1 /* WindowToolbar.swift */; };
+		F9894E2429A4FA5500B7E5AB /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9894E2329A4FA5500B7E5AB /* SearchBarView.swift */; };
 		F9A863892989A3180047041E /* core-web-browser in Frameworks */ = {isa = PBXBuildFile; productRef = F9A863882989A3180047041E /* core-web-browser */; };
 		F9B9F08A290426B8000F4BD4 /* WindowComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B9F089290426B8000F4BD4 /* WindowComposer.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		F972BC9C28D00C1C00DEFDDF /* mac-web-browserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mac-web-browserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9753CB9290588BA0085A95B /* WindowToolbarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowToolbarFactory.swift; sourceTree = "<group>"; };
 		F97E4BE2298D3E17005D1EF1 /* WindowToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowToolbar.swift; sourceTree = "<group>"; };
+		F9894E2329A4FA5500B7E5AB /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		F9B9F089290426B8000F4BD4 /* WindowComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				F93CAAC12904E0BA006E78CC /* WindowController.swift */,
 				F9753CB9290588BA0085A95B /* WindowToolbarFactory.swift */,
 				F97E4BE2298D3E17005D1EF1 /* WindowToolbar.swift */,
+				F9894E2329A4FA5500B7E5AB /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				F972BC9128D00C1B00DEFDDF /* WindowView.swift in Sources */,
 				F97E4BE3298D3E17005D1EF1 /* WindowToolbar.swift in Sources */,
 				F9B9F08A290426B8000F4BD4 /* WindowComposer.swift in Sources */,
+				F9894E2429A4FA5500B7E5AB /* SearchBarView.swift in Sources */,
 				F9753CBA290588BA0085A95B /* WindowToolbarFactory.swift in Sources */,
 				F972BC8F28D00C1B00DEFDDF /* AppDelegate.swift in Sources */,
 				F93CAAC22904E0BA006E78CC /* WindowController.swift in Sources */,

@@ -5,7 +5,7 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
     public var delegate: WindowViewContract?
     public let goBackItem: NSToolbarItem
     public let goForwardItem: NSToolbarItem
-    public let searchItem: NSSearchToolbarItem
+    public let searchItem: NSToolbarItem
 
     private let goBackItemIdentifier = "toolbarBackItem"
     private let goForwardItemIdentifier = "toolbarFowardItem"
@@ -43,7 +43,9 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
         goBackItem.target = self
         goForwardItem.action = #selector(didTapForwardButton)
         goForwardItem.target = self
-        searchItem.searchField.delegate = self
+
+        let searchBarView = searchItem.view as? SearchBarView
+        searchBarView?.searchField.delegate = self
     }
 
     @objc private func didTapBackButton() {
