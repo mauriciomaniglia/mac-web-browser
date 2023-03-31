@@ -9,7 +9,10 @@ final class SearchBarView: NSView {
 
     let progressIndicator: NSProgressIndicator = {
         let progressIndicator = NSProgressIndicator()
+        progressIndicator.maxValue = 1.0
+        progressIndicator.minValue = 0.0
         progressIndicator.isHidden = true
+        progressIndicator.isIndeterminate = false
         return progressIndicator
     }()
 

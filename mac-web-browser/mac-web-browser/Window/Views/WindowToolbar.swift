@@ -38,6 +38,17 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
         return []
     }
 
+    public func updateProgressBar(_ value: Double?) {
+        let searchBarView = searchItem.view as? SearchBarView
+
+        if let value = value, value < 1 {
+            searchBarView?.progressIndicator.doubleValue = value
+            searchBarView?.progressIndicator.isHidden = false
+        } else {
+            searchBarView?.progressIndicator.isHidden = true
+        }
+    }
+
     private func setupToolbarItems() {
         goBackItem.action = #selector(didTapBackButton)
         goBackItem.target = self

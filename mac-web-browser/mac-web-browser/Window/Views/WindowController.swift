@@ -24,5 +24,9 @@ final public class WindowController: NSWindowController {
         (contentViewController?.view as? WindowView)?.webView.isHidden = !presentableModel.showWebView
         toolbarDelegate.goBackItem.target = presentableModel.canGoBack ? toolbarDelegate : nil
         toolbarDelegate.goForwardItem.target = presentableModel.canGoForward ? toolbarDelegate : nil
+
+        if let progressBarValue = presentableModel.progressBar {
+            toolbarDelegate.updateProgressBar(progressBarValue)
+        }
     }
 }
