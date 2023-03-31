@@ -38,15 +38,15 @@ public final class WindowToolbar: NSObject, NSToolbarDelegate {
         return []
     }
 
-    public func updateProgressBar(_ value: Double?) {
+    public func startProgressBar(_ value: Double) {
         let searchBarView = searchItem.view as? SearchBarView
+        searchBarView?.progressIndicator.isHidden = false
+        searchBarView?.progressIndicator.doubleValue = value
+    }
 
-        if let value = value, value < 1 {
-            searchBarView?.progressIndicator.doubleValue = value
-            searchBarView?.progressIndicator.isHidden = false
-        } else {
-            searchBarView?.progressIndicator.isHidden = true
-        }
+    public func finishProgressBar() {
+        let searchBarView = searchItem.view as? SearchBarView
+        searchBarView?.progressIndicator.isHidden = true        
     }
 
     private func setupToolbarItems() {

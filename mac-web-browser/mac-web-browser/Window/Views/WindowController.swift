@@ -25,8 +25,10 @@ final public class WindowController: NSWindowController {
         toolbarDelegate.goBackItem.target = presentableModel.canGoBack ? toolbarDelegate : nil
         toolbarDelegate.goForwardItem.target = presentableModel.canGoForward ? toolbarDelegate : nil
 
-        if let progressBarValue = presentableModel.progressBar {
-            toolbarDelegate.updateProgressBar(progressBarValue)
+        if let progressBarValue = presentableModel.progressBar, progressBarValue < 1 {
+            toolbarDelegate.startProgressBar(progressBarValue)
+        } else {
+            toolbarDelegate.finishProgressBar()
         }
     }
 }
