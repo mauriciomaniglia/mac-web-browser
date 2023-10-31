@@ -1,15 +1,19 @@
 import Cocoa
-import WebKit
 
 public class WindowView: NSView {
-    let webView = WKWebView()
+    let webView: NSView
 
-    convenience init() {
-        self.init(frame: .init(origin: .init(x: 0, y: 0), size: .init(width: 1000, height: 500)))
+    init(webView: NSView) {
+        self.webView = webView
+        super.init(frame: .init(origin: .init(x: 0, y: 0), size: .init(width: 1000, height: 500)))
         addSubview(webView)
         setupConstraints()
     }
-    
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private func setupConstraints() {
         webView.translatesAutoresizingMaskIntoConstraints = false
 
