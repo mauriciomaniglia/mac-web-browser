@@ -1,5 +1,5 @@
 # mac-web-browser
-Web browser for MacOS 
+Web browser for MacOS (AppKit)
 
 ## Building the code
 
